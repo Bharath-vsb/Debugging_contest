@@ -1,0 +1,328 @@
+/* ═══════════════════════════════════════════════════════════
+   LandingPage.css
+   ═══════════════════════════════════════════════════════════ */
+
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+/* ── Decorative geometry (Canvas) ── */
+.landing__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  /* Behind nav/hero but above bg */
+}
+
+/* Remove old geo */
+.landing__geo {
+  display: none;
+}
+
+/* ── Nav ── */
+.landing__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.landing__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing__logo-icon {
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+/* ── Hero ── */
+.landing__hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.landing__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
+}
+
+.landing__badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: dot-blink 2s ease-in-out infinite;
+}
+
+@keyframes dot-blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.landing__title {
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  /* Ensure glitch pseudo-elements align */
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 30px rgba(0, 240, 192, 0.2);
+}
+
+/* Remove old accent class since we are using Glitch effect now */
+.landing__title-accent {
+  display: none;
+}
+
+.landing__subtitle {
+  max-width: 540px;
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* ── Stats ── */
+.landing__stats {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.landing__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.landing__stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.landing__stat-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* ── CTA ── */
+.landing__cta {
+  margin-bottom: 32px;
+}
+
+/* ── Language pills ── */
+.landing__langs {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-pill {
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+.lang-pill--c {
+  background: var(--info-dim);
+  color: var(--info);
+}
+
+.lang-pill--java {
+  background: var(--warning-dim);
+  color: var(--warning);
+}
+
+.lang-pill--py {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+/* ── Footer ── */
+.landing__footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 2;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SHARED BUTTON STYLES (used across all pages)
+   ═══════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #0a0c0f;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 4px 20px var(--accent-dim);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn--danger:hover {
+  background: #ff3a4a;
+}
+
+.btn--lg {
+  padding: 14px 36px;
+  font-size: 1rem;
+}
+
+.btn--sm {
+  padding: 6px 14px;
+  font-size: 0.78rem;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .landing__stats {
+    gap: 24px;
+  }
+
+  .landing__geo--1 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* ── Entry Animation ── */
+.landing__logo,
+.landing__title,
+.landing__subtitle,
+.landing__stats,
+.landing__cta,
+.landing__langs {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.landing--loaded .landing__logo,
+.landing--loaded .landing__title,
+.landing--loaded .landing__subtitle,
+.landing--loaded .landing__stats,
+.landing--loaded .landing__cta,
+.landing--loaded .landing__langs {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Exit Transition ── */
+.landing--exiting {
+  pointer-events: none;
+}
+
+.landing--exiting .landing__hero {
+  animation: hero-exit 1s cubic-bezier(0.6, 0.05, 0.2, 1) forwards;
+}
+
+.landing--exiting .landing__nav,
+.landing--exiting .landing__footer {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes hero-exit {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.1) translateZ(0);
+    /* Subtle scale for smoothness */
+    filter: blur(12px);
+  }
+}

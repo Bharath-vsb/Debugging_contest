@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════
+   AdminLogin.css
+   ═══════════════════════════════════════════════════════════ */
+
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at 50% 10%, rgba(0, 240, 192, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 10% 90%, rgba(56, 189, 248, 0.05) 0%, transparent 40%);
+  padding: 40px 20px;
+}
+
+.admin-login__card {
+  background: rgba(22, 27, 34, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  animation: scaleIn 0.5s ease-out;
+}
+
+.admin-login__icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 10px rgba(0, 240, 192, 0.4));
+}
+
+.admin-login__card h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.admin-login__card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.admin-login__error {
+  background: rgba(255, 69, 93, 0.1);
+  border: 1px solid rgba(255, 69, 93, 0.2);
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-login__field {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.admin-login__field label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.admin-login__password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-login__password-wrapper .input {
+  padding-right: 45px;
+}
+
+.admin-login__toggle-password {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.admin-login__toggle-password:hover {
+  color: var(--text-primary);
+}

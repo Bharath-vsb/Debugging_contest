@@ -1,0 +1,7 @@
+[dotenv@17.2.3] injecting env (10) from backend\.env -- tip: ΓÜÖ∩╕Å  override existing env vars with { override: true }
+Connecting to MongoDB...
+Connected to: mongodb://localhost:27017/debugcontest
+MongooseError: Operation `questions.deleteMany()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (C:\Users\CSE\Documents\contest-platform\backend\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:187:23)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)

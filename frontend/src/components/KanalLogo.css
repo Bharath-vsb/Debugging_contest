@@ -1,0 +1,52 @@
+.kanal-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    /* Holographic/Glassy feel */
+    filter: drop-shadow(0 0 15px rgba(0, 240, 192, 0.3));
+}
+
+.kanal-logo__top {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: -5px;
+    align-self: flex-start;
+    margin-left: 5px;
+    text-shadow: 0 0 10px var(--accent);
+}
+
+.kanal-logo__main {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    line-height: 1;
+}
+
+.kanal-logo__text {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.02em;
+    font-family: var(--font-sans);
+    /* Gradient Text */
+    background: linear-gradient(180deg, #fff 20%, #94a3b8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.kanal-logo__bottom {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: white;
+    align-self: flex-end;
+    margin-top: -5px;
+    margin-right: 5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
